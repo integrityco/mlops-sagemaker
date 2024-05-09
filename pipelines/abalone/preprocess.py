@@ -20,8 +20,6 @@ logger.setLevel(logging.INFO)
 logger.addHandler(logging.StreamHandler())
 
 
-
-
 # Since we get a headerless CSV file we specify the column names here.
 feature_columns_names = [
     "sex",
