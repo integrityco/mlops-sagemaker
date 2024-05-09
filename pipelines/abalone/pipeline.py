@@ -128,8 +128,8 @@ def get_pipeline(
     model_package_group_name="AbalonePackageGroup",
     pipeline_name="AbalonePipeline",
     base_job_prefix="Abalone",
-    processing_instance_type="ml.t3.medium",
-    training_instance_type="ml.t3.medium",
+    processing_instance_type="ml.m4.xlarge",
+    training_instance_type="ml.m4.xlarge",
 ):
     """Gets a SageMaker ML Pipeline instance working with on abalone data.
 
@@ -286,8 +286,8 @@ def get_pipeline(
     step_args = model.register(
         content_types=["text/csv"],
         response_types=["text/csv"],
-        inference_instances=["ml.t2.medium", "ml.m5.large"],
-        transform_instances=["ml.t3.medium"],
+        inference_instances=["ml.t2.medium", "ml.m4.xlarge"],
+        transform_instances=["ml.m4.xlarge"],
         model_package_group_name=model_package_group_name,
         approval_status=model_approval_status,
         model_metrics=model_metrics,
