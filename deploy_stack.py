@@ -7,7 +7,6 @@ from botocore.exceptions import ClientError
 
 logger = logging.getLogger(__name__)
 
-
 def read_parameters(param_file):
     logging.info(f"Reading param_file from {param_file}")
     with open(param_file, "r") as f:
